@@ -13,6 +13,7 @@ export default function Home() {
     return (
         <SafeAreaView>
             <RoutineCard name="Back and Bi"/>
+            <RoutineCard name="Chest"/>
         </SafeAreaView>
     )
 }
