@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { FunctionComponent } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import colors from '../constants/colors';
@@ -7,10 +6,10 @@ import { useNavigation } from '@react-navigation/native';
 import pageNames from '../constants/pageNames';
 
 
- 
 export default function RoutineCard({name}) {
+    const navigation = useNavigation()
     return ( 
-        <TouchableOpacity >
+        <TouchableOpacity onPress={() => navigation.navigate(pageNames.workout, {name: name})}>
             <View style={styles.card}>
                 <View style={styles.cardContent}>
                     <Text style={styles.text}>{name}</Text>

@@ -1,6 +1,7 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
-import { SafeAreaView, Text } from "react-native";
+import { Pressable, SafeAreaView, Text } from "react-native";
+import pageNames from "../constants/pageNames";
 
 export default function Workout() {
     const navigation = useNavigation()
@@ -16,6 +17,7 @@ export default function Workout() {
     return (
         <SafeAreaView>
             <Text>Workout for {params.name}</Text>
+            <Pressable onPress={() => navigation.navigate(pageNames.activeWorkout)}>Press here</Pressable>
         </SafeAreaView>
     )
 }

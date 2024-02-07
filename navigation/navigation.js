@@ -7,6 +7,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import Workout from "../screens/workout"
 import pageNames from "../constants/pageNames"
 import colors from "../constants/colors"
+import ActiveWorkout from "../screens/activeWorkout"
+import Exercise from "../screens/exercise"
 
 const bottomTab = createBottomTabNavigator()
 // Bottom tab
@@ -41,8 +43,10 @@ const HomeStack = createNativeStackNavigator()
 function HomeStackGroup() {
     return (
         <HomeStack.Navigator>
-            <HomeStack.Screen name={pageNames.home} component={Home}/>
+            <HomeStack.Screen name={pageNames.home} component={Home} options={{headerShown: false}}/>
             <HomeStack.Screen name={pageNames.workout} component={Workout}/>
+            <HomeStack.Screen name={pageNames.activeWorkout} component={ActiveWorkout}/>
+            <HomeStack.Screen name={pageNames.exercise} component={Exercise}/>
         </HomeStack.Navigator>
     )
     

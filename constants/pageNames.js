@@ -1,7 +1,9 @@
 const pageNames = {
     home: 'Home',
     profile: 'Profile',
-    workout: 'Workout'
+    workout: 'Workout',
+    activeWorkout: 'ActiveWorkout',
+    exercise: 'Exercise'
 };
 
 export default pageNames
